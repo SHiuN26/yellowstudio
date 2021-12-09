@@ -1,3 +1,7 @@
+var vm new Vue({
+
+})
+
 $(document).ready(function () {
 
     $(window).scroll(function() { 

@@ -3,6 +3,18 @@
   font-family: 'Bebas Neue', cursive,'微軟正黑體';
 }
 
+* {
+  border: solid 1px !important;
+}
+
+header, section {
+  display: none;
+}
+
+section#section_works {
+  display: block;
+}
+
 html, body {
   overflow-x: hidden;
   font-size: 16px;
@@ -124,6 +136,13 @@ section#section_about .row .r3text {
   text-align: right;
 }
 
+section#section_about .marginbottom {
+  position: absolute;
+  width: 60%;
+  top: calc(100% - 2px);
+  z-index: 3;
+}
+
 section#section_about .btn-area {
   height: 150px;
 }
@@ -165,5 +184,44 @@ section#section_about a {
 .tri5 {
   width: 80px;
   margin-left: 100%;
+}
+
+section#section_service {
+  background-color: #ececec;
+}
+
+section#section_service .col-sm-4 {
+  text-align: center;
+}
+
+section#section_service h3 {
+  color: #e6af2e;
+}
+
+section#section_service .icon_service {
+  width: 60%;
+}
+
+section#section_works {
+  background-color: #ececec;
+}
+
+section#section_works .work {
+  height: 230px;
+  cursor: pointer;
+  position: relative;
+  padding: 5px;
+}
+
+section#section_works .work.big {
+  height: 460px;
+}
+
+section#section_works .work .texts {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 /*# sourceMappingURL=yt.css.map */

@@ -2,12 +2,20 @@ $color_blue: #282f44
 $color_brown: #e6af2e
 $color_yellow: #f5d061
 $color_white: #ececec 
-
+//-------------------------------------------
 *
     font-family: 'Bebas Neue', cursive,'微軟正黑體'
-    // border: solid 1px !important
-// header
-//     display: none
+    
+
+//ddddeeeeeeeebbbbbbbbb
+*
+    border: solid 1px !important
+header,section
+    display: none
+section#section_works
+    display: block
+
+
 @mixin ab_center
     position: absolute
     left: 50%
@@ -17,12 +25,12 @@ $color_white: #ececec
 @mixin size($w,$h)
     width: $w
     height: $h
-
+//----------------------------------------
 html,body
     overflow-x: hidden
     font-size: 16px 
     height: 400vh
-
+//---------------------------------------
 header
     position: relative
     background-color: $color_blue
@@ -57,7 +65,7 @@ header
             transform: scaleX(1.2) scaleY(0.5)
         &.at_top
             opacity: 1
-
+//---------------------------------------------
 nav.navbar
     transition: 0.5s
     a
@@ -68,11 +76,11 @@ nav.navbar.at_top
     a,a:visited
         color: $color_white
 
-
+//--------------------------------------------
 section
     padding: 60px 0px
     position: relative
-
+//-------------------------------------------
 section#section_about
     background-color: $color_brown
     .container
@@ -87,6 +95,11 @@ section#section_about
         .r3text
             font-size: 50px
             text-align: right
+    .marginbottom
+        position: absolute
+        width: 60%
+        top: calc(100% - 2px)
+        z-index: 3
     .btn-area
         height: 150px
     a
@@ -109,3 +122,27 @@ section#section_about
 .tri5
     width: 80px
     margin-left: 100%
+//-----------------------------------------------
+section#section_service
+    background-color: $color_white
+    .col-sm-4
+        text-align: center
+    h3
+        color: $color_brown
+    .icon_service
+        width: 60%
+
+//-------------------------------------
+section#section_works
+    background-color: $color_white
+    .work
+        height: 230px
+        cursor: pointer
+        position: relative
+        padding: 5px
+        &.big
+            height: 460px
+
+        .texts
+            +ab_center
+            
