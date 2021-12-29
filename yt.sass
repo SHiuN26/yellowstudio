@@ -8,12 +8,12 @@ $color_white: #ececec
     
 
 //ddddeeeeeeeebbbbbbbbb
-*
-    border: solid 1px !important
-header,section
-    display: none
-section#section_works
-    display: block
+// *
+//     border: solid 1px !important
+// header,section
+//     display: none
+// section#section_contact
+//     display: block
 
 
 @mixin ab_center
@@ -29,7 +29,6 @@ section#section_works
 html,body
     overflow-x: hidden
     font-size: 16px 
-    height: 400vh
 //---------------------------------------
 header
     position: relative
@@ -89,12 +88,15 @@ section#section_about
         height: 150px
         color: black
         .r1text
-            font-size: 80px    
+            font-size: 80px
+            transition: 0.1s    
         .r2text
-            font-size: 35px 
+            font-size: 35px
+            transition: 0.2s  
         .r3text
             font-size: 50px
             text-align: right
+            transition: 0.3s 
     .marginbottom
         position: absolute
         width: 60%
@@ -132,17 +134,93 @@ section#section_service
     .icon_service
         width: 60%
 
+
 //-------------------------------------
 section#section_works
     background-color: $color_white
+    .marginbottom
+        position: absolute
+        width: 95%
+        top: 100%
+        right: -20px
+        animation: upin 2s both
+        z-index: 5
+
     .work
         height: 230px
         cursor: pointer
         position: relative
         padding: 5px
+        overflow: hidden
+        
         &.big
             height: 460px
+        &::before
+            content: ""
+            display: block
+            opacity: 0
+            +ab_center
+            +size(100%,100%)
+            background-color: rgba(black,0.7)
+            z-index: 5
+            transition: 0.5s
 
         .texts
             +ab_center
+            color: white
+            z-index: 8
+            opacity: 0
+            transition: 0.5s
+            .title
+                line-height: 24px
+
+        &:hover
+            &:before,.texts
+                opacity: 1
             
+    .work img
+        height: 100%
+        +ab_center
+        // @media screen and (max-width: 700px)
+        //     height: auto
+        //     width: 110%        
+section#section_contact
+    background-color: $color_blue
+    color: $color_white
+    overflow: hidden
+
+    .mails
+        height: 400px
+        .mailbody
+            background-color: $color_white
+            color: $color_blue
+            position: absolute
+            padding: 20px
+            padding-left: 40px
+            width: 90%
+            transform: translateX(-30px)
+
+        .mailcover
+            +ab_center
+            top: 70%
+            transform: rotate(5deg) scale(2)  translate(-50%,-50%)
+            img
+                width: 120%
+
+    input,textarea
+        display: block
+        background-color: transparent
+        border: none
+        border: solid 3px $color_blue
+    textarea
+        height: 140px
+        width: 100%
+
+footer
+    position: relative
+    background-color: $color_brown
+    text-align: center
+    .icon
+        width: 80%
+        max-width: 250px
+        padding: 80px 0px

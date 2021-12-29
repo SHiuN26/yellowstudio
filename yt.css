@@ -3,22 +3,9 @@
   font-family: 'Bebas Neue', cursive,'微軟正黑體';
 }
 
-* {
-  border: solid 1px !important;
-}
-
-header, section {
-  display: none;
-}
-
-section#section_works {
-  display: block;
-}
-
 html, body {
   overflow-x: hidden;
   font-size: 16px;
-  height: 400vh;
 }
 
 header {
@@ -125,15 +112,21 @@ section#section_about .row {
 
 section#section_about .row .r1text {
   font-size: 80px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 section#section_about .row .r2text {
   font-size: 35px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 section#section_about .row .r3text {
   font-size: 50px;
   text-align: right;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 section#section_about .marginbottom {
@@ -206,15 +199,43 @@ section#section_works {
   background-color: #ececec;
 }
 
+section#section_works .marginbottom {
+  position: absolute;
+  width: 95%;
+  top: 100%;
+  right: -20px;
+  -webkit-animation: upin 2s both;
+          animation: upin 2s both;
+  z-index: 5;
+}
+
 section#section_works .work {
   height: 230px;
   cursor: pointer;
   position: relative;
   padding: 5px;
+  overflow: hidden;
 }
 
 section#section_works .work.big {
   height: 460px;
+}
+
+section#section_works .work::before {
+  content: "";
+  display: block;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 section#section_works .work .texts {
@@ -223,5 +244,87 @@ section#section_works .work .texts {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  color: white;
+  z-index: 8;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+section#section_works .work .texts .title {
+  line-height: 24px;
+}
+
+section#section_works .work:hover:before, section#section_works .work:hover .texts {
+  opacity: 1;
+}
+
+section#section_works .work img {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+section#section_contact {
+  background-color: #282f44;
+  color: #ececec;
+  overflow: hidden;
+}
+
+section#section_contact .mails {
+  height: 400px;
+}
+
+section#section_contact .mails .mailbody {
+  background-color: #ececec;
+  color: #282f44;
+  position: absolute;
+  padding: 20px;
+  padding-left: 40px;
+  width: 90%;
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
+}
+
+section#section_contact .mails .mailcover {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 70%;
+  -webkit-transform: rotate(5deg) scale(2) translate(-50%, -50%);
+          transform: rotate(5deg) scale(2) translate(-50%, -50%);
+}
+
+section#section_contact .mails .mailcover img {
+  width: 120%;
+}
+
+section#section_contact input, section#section_contact textarea {
+  display: block;
+  background-color: transparent;
+  border: none;
+  border: solid 3px #282f44;
+}
+
+section#section_contact textarea {
+  height: 140px;
+  width: 100%;
+}
+
+footer {
+  position: relative;
+  background-color: #e6af2e;
+  text-align: center;
+}
+
+footer .icon {
+  width: 80%;
+  max-width: 250px;
+  padding: 80px 0px;
 }
 /*# sourceMappingURL=yt.css.map */

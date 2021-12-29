@@ -51,7 +51,7 @@
     <header id="header_index">
         <div class="container">
             <img class="icon" src="https://awiclass.monoame.com/img/webpic/w_icon.svg" alt="" />
-            <img class="marginbottom moutian" src="https://awiclass.monoame.com/img/margin/m_index.svg" alt="" />
+            <img class="marginbottom mountain" src="https://awiclass.monoame.com/img/margin/m_index.svg" alt="" />
             <div class="explore at_top">EXPLORE</div>
         </div>
     </header>
@@ -113,50 +113,63 @@
     </section>
 
 <section id="section_works">
+    <img class="marginbottom mountain" src="https://awiclass.monoame.com/img/margin/m_works.svg" alt="">
     <div id="app" class="container">
-        <div class="row">
+        <div class="row" v-if="works.length&gt;0">
             <div class="col-sm-12">
                 <h1>Works</h1>
             </div>
-        </div>
-        <div class="row">
             <div class="col-sm-6 work big">
-                <img src="" alt="">
+                <img :src="works[1].img" alt="">
                 <div class="texts">
-                    <h4 class="title">名稱</h4>
-                    <p class="content">詳細</p>
+                    <h4 class="title">{{works[1].name}}</h4>
+                    <p class="content" v-html="works[1].content.substr(0,40)"></p>
                 </div>
             </div>
             <div class="col-sm-6">
-                <div class="col-sm-6 work">
-                    <img src="" alt="">
+                <div class="col-sm-6 work" v-for="w in works.slice(2,6)">
+                    <img :src="w.img" alt="">
                     <div class="texts">
-                        <h4 class="title">名稱</h4>
-                    </div>
-                </div>
-                <div class="col-sm-6 work">
-                    <img src="" alt="">
-                    <div class="texts">
-                        <h4 class="title">名稱</h4>
-                    </div>
-                </div>
-                <div class="col-sm-6 work">
-                    <img src="" alt="">
-                    <div class="texts">
-                        <h4 class="title">名稱</h4>
-                    </div>
-                </div>
-                <div class="col-sm-6 work">
-                    <img src="" alt="">
-                    <div class="texts">
-                        <h4 class="title">名稱</h4>
+                        <h4 class="title">{{w.name}}</h4>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
+<section id="section_contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="mails">
+                    <div class="mailcover">
+                        <img src="https://awiclass.monoame.com/img/webpic/w_mail_cover.svg" alt="">
+                    </div>
+                    <div class="mailbody">
+                        <h5>Dear Yellow Studio</h5>
+                        <label>Name</label>
+                        <input type="text">
+                        <label>Email</label>
+                        <input type="text">
+                        <label>Content</label>
+                        <textarea></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h2>CONTACT</h2>
+                <br>
+                <p>If you have any question about us,<br>Don`t hestitate to contact us !</p>
+                <br>
+                <br>
+                <p>YELLOWSTUDIO@gmail.com<br>ADDRESS: TAIWAN, TAIPEI , XORO Road<br>Phone: 02-12345678</p>
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="footer" >
+    <img class="icon" src="https://awiclass.monoame.com/img/webpic/w_icon_black.svg" alt="">
+</footer>
 </body>
 
 </html>
