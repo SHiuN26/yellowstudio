@@ -30,6 +30,9 @@ $(document).ready(function () {
         // console.log($("#section_about").offset().top);
         // console.log($("#section_about").offset().left);
 
+        $("#cross").css("left",x+"px");
+        $("#cross").css("top",y+"px");
+
 
         $(".mountain").css("transform","translateX("+(pagex/-20+50)+"px)")
         $(".r1text").css("transform","translateX("+(y/-5)+"px)")

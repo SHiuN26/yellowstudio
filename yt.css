@@ -150,6 +150,38 @@ section#section_about a {
           transform: translate(-50%, -50%) rotate(10deg);
 }
 
+section#section_about #cat {
+  width: 30%;
+  max-width: 300px;
+  position: absolute;
+  right: 0px;
+  bottom: -2px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+section#section_about #cross {
+  position: absolute;
+}
+
+section#section_about:before, section#section_about:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 15px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+section#section_about:after {
+  -webkit-transform: translate(-50%, -50%) rotate(136deg);
+          transform: translate(-50%, -50%) rotate(136deg);
+}
+
 .tri {
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
