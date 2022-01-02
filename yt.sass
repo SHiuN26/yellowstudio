@@ -82,8 +82,6 @@ section
 //-------------------------------------------
 section#section_about
     background-color: $color_brown
-    
-
     .container
         transform: rotate(15deg) scale(0.9)
     .row
@@ -119,18 +117,18 @@ section#section_about
         transform: translateX(-50%)
     #cross
         position: absolute
-    &:before,&:after
-        content: ""
-        display: block
-        width: 60px
-        height: 15px
-        background-color: #fff
-        position: absolute
-        left: 50%
-        top: 50%
-        transform: translate(-50%,-50%) rotate(45deg)
-    &:after
-        transform: translate(-50%,-50%) rotate(136deg)
+        &:before,&:after
+            content: ""
+            display: block
+            width: 60px
+            height: 15px
+            background-color: #fff
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%,-50%) rotate(45deg)
+        &:after
+            transform: translate(-50%,-50%) rotate(136deg)
 
 .tri
     transform: rotate(-15deg)

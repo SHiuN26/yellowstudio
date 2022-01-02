@@ -164,7 +164,7 @@ section#section_about #cross {
   position: absolute;
 }
 
-section#section_about:before, section#section_about:after {
+section#section_about #cross:before, section#section_about #cross:after {
   content: "";
   display: block;
   width: 60px;
@@ -177,7 +177,7 @@ section#section_about:before, section#section_about:after {
           transform: translate(-50%, -50%) rotate(45deg);
 }
 
-section#section_about:after {
+section#section_about #cross:after {
   -webkit-transform: translate(-50%, -50%) rotate(136deg);
           transform: translate(-50%, -50%) rotate(136deg);
 }

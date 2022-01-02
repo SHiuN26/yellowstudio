@@ -26,9 +26,15 @@ $(document).ready(function () {
         var x=pagex-$("#section_about").offset().left;
         var y=pagey-$("#section_about").offset().top;
         // console.log(x+","+y);
-        // console.log(y);
+        console.log(pagey);
+        // console.log(pagey,y);
         // console.log($("#section_about").offset().top);
         // console.log($("#section_about").offset().left);
+        if(y>0||y>$("section_about").outerHeight())
+            $("#cross").css(opacity,0)
+        else
+            $("#cross").css(opacity,0)
+
 
         $("#cross").css("left",x+"px");
         $("#cross").css("top",y+"px");
